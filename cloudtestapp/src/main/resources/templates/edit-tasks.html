@@ -46,12 +46,20 @@
 
 
         
-        <input type="submit" class="btn btn-primary" value="Update Task">
+    <div class="d-flex justify-content-between">
+        <input type="submit" class="btn btn-primary" value="Update Task"
+        onclick="return confirm('Are you sure you want to update this task?');">
 
-        <div class="d-flex justify-content-end gap-2">
-            <a href="/" class="btn btn-secondary">Home</a>
-            <a href="/tasks/add" class="btn btn-secondary">Add Task</a>
-            <a href="/tasks" class="btn btn-secondary">Tasks</a>
+    <!--
+        <input type="submit" class="btn btn-primary" value="Update Task"> --- IGNORE ---
+    -->
+    <div class="d-flex justify-content-end gap-2">
+        <button th:type="button" class="btn btn-secondary" onclick="history.back()">
+            Back
+        </button>
+        <a href="/" class="btn btn-secondary">Home</a>
+
+            </div>
         </div>
     </form>
 </div> 
