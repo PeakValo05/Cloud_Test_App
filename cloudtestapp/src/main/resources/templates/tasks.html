@@ -76,6 +76,15 @@
 
         <tbody>
 
+    <div th:if="${successMessage}" class="alert alert-success" role="alert">
+        <span th:text="${successMessage}"></span>
+    </div>
+    <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
+        <span th:text="${errorMessage}"></span>
+    </div>
+    <div th:if="${#lists.isEmpty(tasks)}" class="alert alert-info" role="alert">
+        No tasks available. Please add a new task.
+    </div>
         <tr th:each="task : ${tasks}">
             <td th:text="${task.title}"></td>
             <td th:text="${task.description}"></td>
@@ -105,6 +114,7 @@
         <button th:type="button" class="btn btn-secondary" onclick="history.back()">
             Back
         </button>
+
         <a href="/" class="btn btn-secondary">Home</a>
         </div>
     </div>
