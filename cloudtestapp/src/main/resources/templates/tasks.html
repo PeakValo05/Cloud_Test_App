@@ -86,7 +86,7 @@
         No tasks available. Please add a new task.
     </div>
         <tr th:each="task : ${tasks}">
-            <td th:text="${task.title}"></td>
+            <td th:text="${task.title}">TEST</td>
             <td th:text="${task.description}"></td>
             <td th:text="${task.status}"></td>
             <td th:text="${task.dueDate}"></td>
